@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <title>Sign Up Form</title>
   </head>
   <body>
@@ -36,35 +37,63 @@
       <div class="blank">
         <p></p>
       </div>
-      <div class="inputs">
-        <h2 id="title">Sign Up!</h2>
+      <form id="inputs" onsubmit="return validatePassword()">
+        <h2 id="title">Your journey starts here!</h2>
         <div>
           <label for="first-name">First Name</label>
-          <input type="text" id="first-name" />
+          <input
+            type="text"
+            id="first-name"
+            placeholder="First Name"
+            required
+          />
+          <p></p>
         </div>
         <div>
           <label for="last-name">Last Name</label>
-          <input type="text" id="last-name" />
+          <input type="text" id="last-name" placeholder="Last Name" required />
+          <p></p>
         </div>
         <div>
           <label for="email">Email</label>
-          <input type="email" id="email" />
+          <input type="email" id="email" placeholder="Email" required />
+          <p></p>
         </div>
         <div>
           <label for="phone-number">Phone Number</label>
-          <input type="number" id="phone-number" />
+          <input type="number" id="phone-number" placeholder="Phone Number" />
+          <p></p>
         </div>
         <div>
           <label for="password">Password</label>
-          <input type="password" id="password" />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            value=""
+            required
+          />
+          <p class="error"></p>
         </div>
         <div>
           <label for="confirm-password">Confirm Password</label>
-          <input type="password" id="confirm-password" />
+          <input
+            type="password"
+            id="confirm-password"
+            placeholder="Confirm Password"
+            value=""
+            required
+          />
+          <p class="error"></p>
         </div>
-      </div>
+      </form>
       <div class="submit">
-        <input type="submit" value="Create Account" />
+        <input
+          type="submit"
+          value="Create Account"
+          id="submit-form"
+          form="inputs"
+        />
         <p>
           Already have an account?
           <a href="">Log in</a>
