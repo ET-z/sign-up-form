@@ -21,7 +21,7 @@ body {
 .sidebar {
     background-color: blue;
     width: var(--sidebar-width);
-    background-image: url("/Files/valentin-salmon-d7t9sEKN03c-unsplash.jpg");
+    background-image: url("../Files/valentin-salmon-d7t9sEKN03c-unsplash.jpg");
     background-size: 100% 100%;
 }
 
